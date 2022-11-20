@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Header, Navbar, Link, Logo } from "./styled";
 
-import { ContentWrapper } from "../styled";
+import { Content, ContentWrapper } from "../styled";
 
 interface Props {
   children: React.ReactNode;
@@ -22,7 +22,7 @@ export const Layout = ({ children }: Props) => {
         <Logo>The Rick and Morty</Logo>
         <Logo>API</Logo>
       </ContentWrapper>
-      {children}
+      <Content>{children}</Content>
     </>
   );
 };

@@ -1,14 +1,8 @@
 import React from "react";
-import {
-  Card,
-  Info,
-  Name,
-  TextGray,
-  WhiteText,
-  WhiteTextHover,
-} from "./styled";
+import { Card, Info, TextGray, WhiteTextHover } from "./styled";
 import Image from "next/image";
 import Link from "next/link";
+import { Name, WhiteText } from "../styled";
 
 interface Props {
   name: string;
@@ -22,14 +16,7 @@ interface Props {
   };
 }
 
-export const CharacterCard = ({
-  name,
-  id,
-  status,
-  image,
-  url,
-  location,
-}: Props) => {
+export const CharacterCard = ({ name, id, status, image, location }: Props) => {
   return (
     <Card>
       <Image
@@ -40,7 +27,7 @@ export const CharacterCard = ({
         height={200}
       />
       <Info>
-        <Link href={url}>
+        <Link href={`${id}`}>
           <Name>{name}</Name>
         </Link>
         <WhiteText>{status}</WhiteText>

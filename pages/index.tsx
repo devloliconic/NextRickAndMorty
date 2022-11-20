@@ -18,7 +18,6 @@ type Response = {
 const Home = ({
   data,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
-  console.log(data);
   return (
     <BackgroundWrapper>
       <ContentWrapper>
